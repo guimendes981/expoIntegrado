@@ -1,20 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect, useState, SafeAreaView } from "react";
+import CatFacts from "./src/components/screens/CatFacts";
+import { StatusBar } from "expo-status-bar";
+import ClickableCard from "./src/components/ClickableCard";
+import HeaderTitle from "./src/components/HeaderTitle";
+import ItemList from "./src/components/ItemList";
+import RandomUserDataDisplay from "./src/components/RandomUserDataDisplay";
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <SafeAreaView>
       <StatusBar style="auto" />
-    </View>
+    {/* <CatFacts /> */}
+    <ClickableCard />
+    <HeaderTitle />
+    <ItemList />
+    <RandomUserDataDisplay />
+    <UniversityListDisplay />
+    </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
